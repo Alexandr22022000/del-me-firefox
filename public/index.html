@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple Test</title>
+</head>
+<body>
+<button id="btn">Start</button>
+<script src="stm_web.min.js"></script>
+<script>
+    var stm = SpeakToMe({
+        listener: listener
+    });
+
+    function listener(msg) {
+        console.log('listener', msg);
+    }
+
+    document.getElementById('btn').onclick = () => {
+        stm.listen();
+    };
+</script>
+</body>
+</html>
